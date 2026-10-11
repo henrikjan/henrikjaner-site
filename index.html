@@ -42,6 +42,7 @@
   .order{margin:64px 0 0;border:1px solid var(--line);border-radius:18px;padding:48px 40px}
   .order h2{font-size:clamp(1.4rem,3vw,1.9rem);letter-spacing:-.02em;margin-bottom:10px;font-weight:700}
   .order .price{font-size:1.05rem;color:var(--ink);margin-bottom:8px;font-weight:600}
+  .order .price .vat{font-size:.85rem;font-weight:400;color:inherit;opacity:.75}
   .order p{color:var(--ink-soft);margin-bottom:26px;max-width:50ch}
   .order-row{display:flex;gap:12px;flex-wrap:wrap}
   .btn{display:inline-block;border-radius:26px;padding:13px 26px;font-weight:600;font-size:1rem;transition:all .15s ease}
@@ -119,7 +120,7 @@
 
   <section class="order" id="tilaa">
     <h2>Tilaa kuvaus</h2>
-    <div class="price">Alkaen 149 €</div>
+    <div class="price">Alkaen 149 € <span class="vat">(sis. alv 25,5 %)</span></div>
     <p>Kerro lyhyesti kohteesta ja sijainnista, niin palaan hinnan ja aikataulun kanssa. Ilmakuvaus dronella lisäpalveluna.</p>
     <div class="order-row">
       <a href="mailto:tilaus@henrikjaner.com?subject=Kuvauspyyntö" class="btn btn-dark">Lähetä sähköpostia</a>
