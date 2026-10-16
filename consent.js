@@ -78,14 +78,14 @@
 
   var css =
     '.cb{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;max-width:560px;margin:0 auto;' +
-    'background:#fff;color:#1a1a1a;border:1px solid #e8e6e1;border-radius:14px;padding:20px 22px;' +
-    'box-shadow:0 10px 40px rgba(0,0,0,.14);font-size:.92rem;line-height:1.5;display:none}' +
+    'background:#f6f2ea;color:#1f211d;border:1px solid #1f211d;padding:20px 22px;' +
+    'box-shadow:0 12px 40px rgba(0,0,0,.12);font-size:.9rem;line-height:1.5;display:none}' +
     '.cb.open{display:block}' +
-    '.cb p{margin:0 0 14px;color:#4a4a4a}' +
+    '.cb p{margin:0 0 14px;color:#4d4b44}' +
     '.cb a{text-decoration:underline}' +
     '.cb-row{display:flex;gap:10px;flex-wrap:wrap}' +
-    '.cb button{flex:1 1 140px;font:inherit;font-weight:600;border-radius:24px;padding:11px 18px;' +
-    'cursor:pointer;background:#1a1a1a;color:#fff;border:1px solid #1a1a1a}' +
+    '.cb button{flex:1 1 140px;font:inherit;font-weight:600;border-radius:0;padding:11px 18px;' +
+    'cursor:pointer;background:#2e4a3d;color:#f6f2ea;border:1px solid #2e4a3d}' +
     '.cb button:hover{opacity:.9}';
 
   var banner;
