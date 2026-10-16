@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asuntokuvaus itsemyyjälle 149 € · Henrik Janér</title>
-<meta name="description" content="Myytkö asuntosi itse? 20 viimeisteltyä kuvaa, ilmakuvat kaupan päälle, kuvat seuraavana päivänä. 149 € Etelä-Suomessa. Et pidä kuvista, et maksa.">
+<meta name="description" content="Myytkö asuntosi itse? 20 valmiiksi käsiteltyä kuvaa, ilmakuvat kaupan päälle ja kuvat seuraavana päivänä. 149 € Etelä-Suomessa. Jos et pidä kuvista, et maksa.">
 <!-- Google tag (gtag.js), ladataan vasta suostumuksen jälkeen: ks. consent.js -->
 <script src="consent.js"></script>
 <style>
@@ -63,10 +63,10 @@
   .steps p{color:var(--ink-soft);font-size:.97rem}
 
   /* Takuu */
-  .guarantee{margin:72px 0 0;border:2px solid var(--ink);border-radius:18px;padding:40px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
-  .seal{width:92px;height:92px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:.78rem;line-height:1.15;letter-spacing:.04em;text-transform:uppercase}
-  .guarantee h2{margin-bottom:8px}
-  .guarantee p{color:var(--ink-soft);max-width:60ch}
+  .guarantee{margin:72px 0 0;background:var(--ink);color:#fff;border-radius:18px;padding:52px 40px;text-align:center}
+  .guarantee .label{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:4px 14px;margin-bottom:18px;color:#fff}
+  .guarantee h2{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:12px}
+  .guarantee p{color:rgba(255,255,255,.78);max-width:52ch;margin:0 auto;font-size:1.05rem}
 
   /* Kuvaaja */
   .info{padding:72px 0 0;display:grid;grid-template-columns:160px 1fr;gap:36px;align-items:center}
@@ -116,7 +116,7 @@
   @media(max-width:520px){
     .wrap{padding:0 16px}
     .gallery{columns:1}
-    .guarantee{grid-template-columns:1fr;padding:28px 22px;gap:18px}
+    .guarantee{padding:36px 22px;border-radius:14px}
     .info{grid-template-columns:96px 1fr;gap:18px}
     .order{padding:32px 20px;border-radius:14px}
     form{grid-template-columns:1fr}
@@ -141,10 +141,10 @@
 
   <section class="hero">
     <div>
-      <h1>Myytkö asuntosi itse? Kuvat, joilla se myy.</h1>
-      <p class="lead">Ostaja päättää ensimmäisestä kuvasta, avaako hän ilmoituksesi. Kuvaan asuntosi niin, että se avataan.</p>
+      <h1>Myytkö asuntosi itse? Kuvat, jotka myyvät.</h1>
+      <p class="lead">Ostaja päättää jo ensimmäisen kuvan perusteella, avaako hän ilmoituksesi vai selaako ohi. Kuvaan asuntosi niin, että se pysäyttää.</p>
       <ul class="stack">
-        <li>20 viimeisteltyä kuvaa</li>
+        <li>20 valmiiksi käsiteltyä kuvaa</li>
         <li id="drone"><span class="free">Ilmakuvat dronella kaupan päälle</span></li>
         <li>Kuvaus yleensä 3 päivän sisällä</li>
         <li>Kuvat valmiina seuraavana päivänä</li>
@@ -163,7 +163,7 @@
   </section>
 
   <section class="gallery-sec" id="galleria">
-    <h2>Viimeaikaisia kuvauksia</h2>
+    <h2>Viimeisimpiä kuvauksia</h2>
     <div class="gallery" id="grid">
       <figure><img loading="lazy" src="images/kitchen-white.jpg" alt="Valkoinen saarekekeittiö ja erkkeri-ikkunat"></figure>
       <figure><img loading="lazy" src="images/dining-brick.jpg" alt="Ruokailutila ja olohuone tiiliseinällä ja kaari-ikkunalla"></figure>
@@ -180,25 +180,23 @@
   <section class="steps-sec">
     <h2>Näin se toimii</h2>
     <ol class="steps">
-      <li><h3>Tilaa</h3><p>Täytä lomake tai soita. Sovitaan aika, yleensä 3 päivän sisällä.</p></li>
-      <li><h3>Kuvaan</h3><p>Tulen paikalle ja kuvaan sisätilat, pihan ja ilmakuvat dronella.</p></li>
-      <li><h3>Saat kuvat</h3><p>20 viimeisteltyä kuvaa seuraavana päivänä, valmiina myynti-ilmoitukseen.</p></li>
+      <li><h3>Tilaa</h3><p>Täytä lomake tai soita, niin sovitaan kuvausaika. Yleensä pääsen paikalle kolmen päivän sisällä.</p></li>
+      <li><h3>Kuvaan</h3><p>Kuvaan sisätilat ja pihan. Ilmakuvat otan dronella.</p></li>
+      <li><h3>Saat kuvat</h3><p>Saat 20 valmiiksi käsiteltyä kuvaa seuraavana päivänä. Ne voi ladata suoraan myynti-ilmoitukseen.</p></li>
     </ol>
   </section>
 
   <section class="guarantee">
-    <div class="seal">Riski<br>on<br>minun</div>
-    <div>
-      <h2>Et pidä kuvista? Et maksa.</h2>
-      <p>Jos kuvat eivät kelpaa ilmoitukseesi, et maksa mitään. Silloin kuvia ei käytetä, eikä sinulle jää laskua.</p>
-    </div>
+    <p class="label">Takuu</p>
+    <h2>Et pidä kuvista? Et maksa.</h2>
+    <p>Jos kuvat eivät mielestäsi kelpaa myynti-ilmoitukseen, et maksa mitään. Kuvia ei silloin käytetä. Riskin kannan minä, en sinä.</p>
   </section>
 
   <section class="info">
     <div class="info-photo"><img loading="lazy" src="images/profile.jpg" alt="Henrik Janér"></div>
     <div>
       <h2>Henrik Janér</h2>
-      <p>Kuvaan koteja Etelä-Suomessa. Luonnollinen valo, suorat linjat ja huolellinen jälkikäsittely, jotta asuntosi näyttää kuvissa yhtä hyvältä kuin paikan päällä.</p>
+      <p>Kuvaan koteja Etelä-Suomessa. Käytän luonnollista valoa, pidän linjat suorina ja käsittelen jokaisen kuvan huolella, jotta asuntosi näyttää kuvissa yhtä hyvältä kuin paikan päällä.</p>
       <p class="reviews"><a href="https://g.page/r/CXJGT49FrG5vEBM" target="_blank" rel="noopener">Lue asiakkaiden arvostelut Googlessa &rarr;</a></p>
     </div>
   </section>
@@ -206,7 +204,7 @@
   <section class="order" id="tilaa">
     <div class="side">
       <h2>Tilaa kuvaus</h2>
-      <p>Jätä tiedot, niin soitan ja sovitaan kuvausaika.</p>
+      <p>Jätä yhteystietosi, niin soitan ja sovitaan kuvausaika.</p>
       <div class="price"><strong>149 €</strong><span>sis. alv 25,5 %</span></div>
       <div class="alt">
         <a href="tel:+358405326009" class="btn btn-ghost" data-track="puhelu">Soita 040 532 6009</a>
@@ -224,8 +222,8 @@
       <div class="field"><label for="f-name">Nimi</label><input id="f-name" name="Nimi" required autocomplete="name"></div>
       <div class="field"><label for="f-phone">Puhelin</label><input id="f-phone" name="Puhelin" type="tel" required autocomplete="tel"></div>
       <div class="field full"><label for="f-addr">Osoite tai paikkakunta</label><input id="f-addr" name="Osoite" required autocomplete="street-address"></div>
-      <div class="field"><label for="f-size">Koko m² <span class="opt">(vapaaehtoinen)</span></label><input id="f-size" name="Koko (m²)" inputmode="numeric"></div>
-      <div class="field"><label for="f-date">Toivottu aika <span class="opt">(vapaaehtoinen)</span></label><input id="f-date" name="Toivottu aika"></div>
+      <div class="field"><label for="f-size">Asunnon koko, m² <span class="opt">(vapaaehtoinen)</span></label><input id="f-size" name="Koko (m²)" inputmode="numeric"></div>
+      <div class="field"><label for="f-date">Toivottu kuvausaika <span class="opt">(vapaaehtoinen)</span></label><input id="f-date" name="Toivottu kuvausaika"></div>
       <div class="field full"><label for="f-msg">Lisätietoja <span class="opt">(vapaaehtoinen)</span></label><textarea id="f-msg" name="Lisätietoja"></textarea></div>
 
       <div class="form-foot">
@@ -281,7 +279,7 @@
         })
         .catch(function(){
           btn.disabled=false;btn.textContent='Tilaa kuvaus · 149 €';
-          msg.textContent='Lähetys ei onnistunut. Soita 040 532 6009 tai lähetä WhatsApp.';msg.hidden=false;
+          msg.textContent='Lähetys ei onnistunut. Soita 040 532 6009 tai lähetä viesti WhatsAppissa.';msg.hidden=false;
         });
     });
   })();
