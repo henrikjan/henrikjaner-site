@@ -15,12 +15,16 @@ A photo shoot of a home that is for sale. The only service on the site.
 _Avoid_: Kiinteistökuvaus, majoituskuvaus
 
 **Offer**:
-The single fixed-price **Asuntokuvaus** package: 20 edited photos, drone photos as a free **Bonus**, a shoot usually within 3 days, next-day delivery, and no travel fees in Etelä-Suomi, for 149 € incl. VAT.
-_Avoid_: Starting price, quote, "alkaen"
+The single fixed-price **Asuntokuvaus** package: 20 edited photos, drone photos and **Prep advice** as **Bonuses**, a shoot on a day that suits the **Self-seller**, photos ready the next day, and no travel fees in Etelä-Suomi, for 149 € incl. VAT.
+_Avoid_: Starting price, quote, "alkaen", promising how soon the shoot happens
 
 **Bonus**:
-Something included free to make the **Offer** irresistible, never sold as an add-on. Drone photos are a bonus, not a separate service.
+Something included free to make the **Offer** irresistible, never sold as an add-on. Drone photos and **Prep advice** are bonuses, not separate services.
 _Avoid_: Add-on, extra (lisäpalvelu)
+
+**Prep advice** (valmistelu):
+Going through, by phone when the shoot is booked, how the **Self-seller** gets the home ready for photos, based on Henrik's prep checklist.
+_Avoid_: Styling, home staging (Henrik advises; he does not style)
 
 **Guarantee**:
 If the **Self-seller** doesn't like the photos, they don't pay, and they don't get to use the photos. A closer used in conversation with a hesitant buyer, never advertised as part of the **Offer**.

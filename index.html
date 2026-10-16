@@ -3,270 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ammattikuvat itse myyvälle · Henrik Janér</title>
-<meta name="description" content="Myytkö asuntoa itse? Ammattilaisen kuvat ilmoitukseen jo huomenna: 20 valmiiksi käsiteltyä kuvaa ja ilmakuvat kaupan päälle. 149 € Etelä-Suomessa.">
+<title>Asuntokuvaus itse myyvälle · Henrik Janér</title>
+<meta name="description" content="Myytkö asuntoa itse? 20 valmiiksi käsiteltyä kuvaa ja ilmakuvat dronella, kuvat valmiina seuraavana päivänä. 149 € Etelä-Suomessa ilman matkakuluja.">
 <!-- Google tag (gtag.js), ladataan vasta suostumuksen jälkeen: ks. consent.js -->
 <script src="consent.js"></script>
-<link rel="preload" href="fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  @font-face{font-family:"Newsreader";src:url(fonts/newsreader-latin-opsz-normal.woff2) format("woff2");font-weight:200 800;font-display:swap}
-  @font-face{font-family:"Hanken Grotesk";src:url(fonts/hanken-grotesk-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}
-
-  :root{
-    --paper:#f6f2ea;--ink:#1f211d;--soft:#66635a;--line:#d9d2c4;
-    --spruce:#2e4a3d;--spruce-dark:#243b31;--on-spruce:#f6f2ea;
-    --serif:"Newsreader",Georgia,"Times New Roman",serif;
-    --sans:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    --max:1200px
-  }
+  @font-face{font-family:"Instrument Sans";src:url(fonts/instrument-sans-latin-wght-normal.woff2) format("woff2");font-weight:400 700;font-display:swap}
+  :root{--bg:#f3efe9;--ink:#241f22;--soft:#665d62;--line:#ddd5cf;--card:#fff;--field:#faf8f6;--field-line:#d8cfc9;
+        --ac:#7c2336;--ac-dark:#561522;--on-ac:#fff}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);font-size:17px;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6}
-  img{display:block;width:100%;height:auto}
-  a{color:inherit}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
-  section{scroll-margin-top:84px}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit;text-decoration:none}
+  body{font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .w{max-width:1160px;margin:0 auto;padding:0 24px}
+  section{scroll-margin-top:24px}
+  h1,h2{letter-spacing:-.035em;font-weight:700;line-height:1.06}
+  h2{font-size:clamp(1.7rem,3vw,2.3rem)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-  .kicker{font-size:.76rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--spruce)}
-  .serif{font-family:var(--serif)}
-  h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.08}
-  h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
-
-  .btn{display:inline-block;font-family:var(--sans);font-size:1rem;font-weight:600;letter-spacing:.01em;text-decoration:none;padding:15px 28px;border:1px solid var(--spruce);background:var(--spruce);color:var(--on-spruce);cursor:pointer;transition:background .15s ease}
-  .btn:hover{background:var(--spruce-dark)}
-  .link{font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
-
-  /* Ylätunniste */
-  header{position:sticky;top:0;z-index:50;background:rgba(246,242,234,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
-  .brand{font-family:var(--serif);font-size:1.45rem;line-height:1.1;text-decoration:none}
-  .brand small{display:block;font-family:var(--sans);font-size:.78rem;color:var(--soft);letter-spacing:.02em;margin-top:2px}
-  .nav .btn{padding:10px 18px;font-size:.92rem}
+  header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0}
+  .name{font-weight:700;font-size:1.15rem}
+  .tel{font-weight:600;border-bottom:2px solid var(--ac)}
+  .btn{display:inline-block;background:var(--ac);color:var(--on-ac);font:inherit;font-weight:700;font-size:1.08rem;padding:16px 30px;border:0;border-radius:8px;box-shadow:0 4px 0 var(--ac-dark);cursor:pointer;text-align:center;transition:transform .1s,box-shadow .1s,filter .15s}
+  .btn:hover{filter:brightness(.94)}
+  .btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ac-dark)}
+  .btn:disabled{opacity:.7;cursor:wait}
+  .link{font-weight:600;border-bottom:2px solid var(--ac)}
 
   /* Kansi */
-  .hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;padding-top:56px}
-  .hero h1{font-size:clamp(2.1rem,3.9vw,3.25rem);margin:16px 0 22px}
-  .hero h1 span{display:block;color:var(--soft)}
-  .lead{font-family:var(--serif);font-size:1.25rem;line-height:1.5;color:var(--ink);max-width:34ch;margin-bottom:30px}
-  .facts{border-top:1px solid var(--ink);margin-bottom:28px}
-  .facts div{display:grid;grid-template-columns:9.5em 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.98rem}
-  .facts dt{color:var(--soft)}
-  .facts dd{font-weight:500}
-  .facts .price{border-bottom:1px solid var(--ink);align-items:baseline}
-  .facts .price dd{font-family:var(--serif);font-size:2rem;font-weight:400;line-height:1}
-  .facts .price dd small{font-family:var(--sans);font-size:.85rem;color:var(--soft);margin-left:6px}
-  .cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-  .hero-img img{aspect-ratio:4/5;object-fit:cover}
-
-  /* Galleria */
-  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:1px solid var(--ink);padding-bottom:16px;margin-bottom:24px}
-  .gallery-sec{padding-top:112px}
-  .feature{margin-bottom:10px;cursor:zoom-in;overflow:hidden}
-  .feature img{aspect-ratio:21/9;object-fit:cover}
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:clamp(200px,22vw,280px);gap:10px}
-  .gallery figure{cursor:zoom-in;overflow:hidden}
-  .gallery img{width:100%;height:100%;object-fit:cover}
-  .gallery .tall{grid-row:span 2}
-  .gallery .wide{grid-column:span 2}
-  .gallery .low img{object-position:center 75%}
-  .gallery img,.feature img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-  .gallery figure:hover img,.feature:hover img{transform:scale(1.025)}
-
-  /* Näin se toimii */
-  .steps-sec{padding-top:112px}
-  .steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-  .steps li{padding-top:4px}
-  .steps .num{font-family:var(--serif);font-size:3rem;line-height:1;color:var(--spruce);display:block;margin-bottom:16px}
-  .steps h3{font-size:1.05rem;font-weight:600;margin-bottom:6px}
-  .steps p{color:var(--soft)}
-
-  /* Kuvaaja */
-  .about{padding-top:112px;display:grid;grid-template-columns:220px 1fr;gap:56px;align-items:center}
-  .about blockquote{font-family:var(--serif);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.4;max-width:30ch;margin-bottom:18px}
-  .about .who{color:var(--soft);margin-bottom:14px}
-  .about img{aspect-ratio:367/512;object-fit:cover;filter:grayscale(.15)}
-
-  /* Tilaus */
-  .order{margin-top:112px;background:var(--spruce);color:var(--on-spruce)}
-  .order-in{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:4fr 6fr;gap:64px;padding:80px 32px}
-  .order .kicker{color:#b9c9bd}
-  .order h2{margin:14px 0 18px}
-  .order .side p{color:#d6dfd8;max-width:34ch;margin-bottom:26px}
-  .order .side .price{font-family:var(--serif);font-size:2.4rem;line-height:1;margin-bottom:28px}
-  .order .side .price small{font-family:var(--sans);font-size:.85rem;color:#b9c9bd;margin-left:6px}
-  .order .alt{display:flex;flex-direction:column;gap:8px}
-  .order .alt a{color:var(--on-spruce)}
-  form{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px;align-content:start}
-  .field{display:flex;flex-direction:column;gap:6px}
-  .field.full{grid-column:1/-1}
-  label{font-size:.82rem;font-weight:600;letter-spacing:.04em;color:#d6dfd8}
-  label .opt{font-weight:400;letter-spacing:0;color:#9fb3a5}
-  input,textarea{font:inherit;font-size:1.02rem;padding:12px 0 10px;border:0;border-bottom:1px solid rgba(246,242,234,.45);background:transparent;color:var(--on-spruce);width:100%;border-radius:0}
-  input:focus,textarea:focus{outline:none;border-bottom-color:var(--on-spruce);box-shadow:0 1px 0 var(--on-spruce)}
-  textarea{min-height:70px;resize:vertical}
-  .form-foot{grid-column:1/-1;display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:8px}
-  .form-foot .btn{background:var(--on-spruce);color:var(--spruce);border-color:var(--on-spruce);width:100%;padding:17px 28px;font-size:1.05rem}
-  .form-foot .btn:hover{background:#fff}
-  .form-foot .btn:disabled{opacity:.7;cursor:wait}
-  .fine{font-size:.82rem;color:#9fb3a5}
-  .form-msg{font-weight:600}
+  .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:start;padding:36px 0 0}
+  .area{color:var(--soft);font-weight:600;font-size:.92rem;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.1rem,4.4vw,3.5rem)}
+  .lead{font-size:1.12rem;color:var(--soft);margin:18px 0 26px;max-width:42ch}
+  .offer{list-style:none;border-top:1px solid var(--line)}
+  .offer li{padding:10px 0;border-bottom:1px solid var(--line)}
+  .card{background:var(--card);border-radius:14px;padding:30px;box-shadow:0 14px 40px rgba(30,30,35,.1)}
+  .card h2{font-size:1.5rem;letter-spacing:-.02em;margin-bottom:4px}
+  .card .sub{color:var(--soft);margin-bottom:18px}
+  .card .price{display:flex;align-items:baseline;gap:8px;margin-bottom:18px}
+  .card .price strong{font-size:2.4rem;letter-spacing:-.04em;line-height:1}
+  .card .price small{color:var(--soft)}
+  form{display:grid;gap:10px}
+  input{font:inherit;font-size:1rem;padding:14px 18px;border:1px solid var(--field-line);border-radius:8px;background:var(--field);color:var(--ink);width:100%}
+  input:focus{outline:2px solid var(--ac);outline-offset:1px}
+  form .btn{width:100%;margin:4px 0 6px}
+  .fine{font-size:.85rem;color:var(--soft);text-align:center}
+  .fine a{text-decoration:underline}
+  .form-msg{font-weight:600;color:var(--ac);text-align:center}
   .hp{position:absolute;left:-9999px}
 
-  footer{padding:40px 0 56px;font-size:.88rem;color:var(--soft)}
-  footer .wrap{display:flex;justify-content:space-between;gap:12px 32px;flex-wrap:wrap}
-  footer nav{display:flex;gap:8px 20px;flex-wrap:wrap}
-  footer a{text-underline-offset:3px}
+  /* Kuvat */
+  .feature{margin-top:64px;cursor:zoom-in}
+  .feature img,.gal img{width:100%;border-radius:12px}
+  .gal{columns:3;column-gap:14px;padding-top:14px}
+  .gal img{margin-bottom:14px;cursor:zoom-in}
 
-  .lb{position:fixed;inset:0;background:rgba(20,22,19,.95);z-index:100;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+  /* Ennen kuvausta */
+  .prep{padding-top:96px;display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:start}
+  .prep-head p{color:var(--soft);margin-top:12px;max-width:34ch}
+  .boxes{list-style:none;columns:2;column-gap:32px}
+  .boxes li{break-inside:avoid;position:relative;padding:12px 0 12px 34px;border-bottom:1px solid var(--line)}
+  .boxes li::before{content:"";position:absolute;left:0;top:14px;width:18px;height:18px;border:2px solid var(--ac);border-radius:4px}
+
+  /* Esittely */
+  .bio{padding-top:96px;display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:center}
+  .bio img{border-radius:12px}
+  .bio h2{margin-bottom:2px}
+  .bio p{color:var(--soft);max-width:54ch}
+  .bio .role{color:var(--ink);font-weight:600;margin-bottom:14px}
+  .bio .link{display:inline-block;margin-top:18px}
+
+  footer{padding:96px 0 56px;color:var(--soft);font-size:.88rem;display:flex;justify-content:space-between;gap:10px 28px;flex-wrap:wrap}
+  footer nav{display:flex;gap:8px 20px;flex-wrap:wrap}
+  footer a{text-decoration:underline;text-underline-offset:3px}
+
+  .lb{position:fixed;inset:0;background:rgba(20,18,19,.94);z-index:100;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
   .lb.open{display:flex}
-  .lb img{max-width:94vw;max-height:90vh;width:auto;cursor:default}
+  .lb img{max-width:94vw;max-height:90vh;width:auto;border-radius:6px;cursor:default}
   .lb-close{position:absolute;top:18px;right:24px;color:#fff;font-size:2rem;line-height:1;cursor:pointer;opacity:.85}
 
   @media(max-width:900px){
-    .hero{grid-template-columns:1fr;gap:36px;padding-top:36px}
-    .hero-img img{aspect-ratio:3/2}
-    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:auto}
-    .gallery .tall,.gallery .wide{grid-row:auto;grid-column:auto}
-    .gallery img{aspect-ratio:4/3;height:auto}
-    .steps{grid-template-columns:1fr;gap:28px}
-    .order-in{grid-template-columns:1fr;gap:40px;padding:56px 32px}
+    .hero{grid-template-columns:1fr;gap:32px}
+    .gal{columns:2}
+    .prep{grid-template-columns:1fr;gap:20px}
+    .bio{grid-template-columns:160px 1fr;gap:28px}
   }
   @media(max-width:560px){
-    body{font-size:16px}
-    .wrap,.order-in{padding-left:18px;padding-right:18px}
-    .brand{font-size:1.25rem}
-    .facts div{grid-template-columns:7.5em 1fr;gap:12px}
-    .feature img{aspect-ratio:3/2}
-    .gallery{grid-template-columns:1fr}
-    .about{grid-template-columns:96px 1fr;gap:20px;align-items:start}
-    form{grid-template-columns:1fr}
-    .gallery-sec,.steps-sec,.about{padding-top:80px}
-    .order{margin-top:80px}
+    .w{padding:0 16px}
+    .gal{columns:1}
+    .boxes{columns:1}
+    .bio{grid-template-columns:1fr}.bio img{max-width:180px}
+    .card{padding:24px 20px}
   }
-  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.gallery figure:hover img,.feature:hover img{transform:none}}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
+<div class="w">
+  <header>
+    <div class="name">Henrik Janér</div>
+    <a class="tel" href="tel:+358405326009" data-track="puhelu">Soita 040 532 6009</a>
+  </header>
 
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#">Henrik Janér<small>Ammattikuvat itse myyvälle</small></a>
-    <a class="btn" href="#tilaa">Tilaa kuvaus</a>
-  </div>
-</header>
-
-<main>
-
-  <section class="wrap hero">
-    <div>
-      <p class="kicker">Asuntokuvaus · Etelä-Suomi</p>
-      <h1>Myytkö asuntoa itse? <span>Ammattilaisen kuvat ilmoitukseen jo huomenna.</span></h1>
-      <p class="lead">Ostaja päättää jo ensimmäisen kuvan perusteella, avaako hän ilmoituksesi vai selaako ohi. Kuvaan asuntosi niin, että hän pysähtyy.</p>
-      <dl class="facts">
-        <div><dt>Kuvia</dt><dd>20 valmiiksi käsiteltyä</dd></div>
-        <div id="drone"><dt>Ilmakuvat</dt><dd>Dronella, kaupan päälle</dd></div>
-        <div><dt>Kuvaus</dt><dd>Yleensä 3 päivän sisällä</dd></div>
-        <div><dt>Kuvat valmiina</dt><dd>Seuraavana päivänä</dd></div>
-        <div><dt>Matkakulut</dt><dd>Sisältyvät hintaan Etelä-Suomessa</dd></div>
-        <div class="price"><dt>Hinta</dt><dd>149 €<small>sis. alv 25,5 %</small></dd></div>
-      </dl>
-      <div class="cta">
-        <a href="#tilaa" class="btn">Tilaa kuvaus</a>
-        <a href="tel:+358405326009" class="link" data-track="puhelu">tai soita 040 532 6009</a>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="area">Asuntokuvaus itse myyvälle · Etelä-Suomi</p>
+        <h1>Myytkö asuntoa itse? Hyvät kuvat tuovat ostajat näyttöön.</h1>
+        <p class="lead">Ostajat valitsevat näytöt kuvien perusteella. Kuvaan kotisi niin, että se erottuu edukseen.</p>
+        <ul class="offer">
+          <li>20 valmiiksi käsiteltyä kuvaa</li>
+          <li id="drone">Ilmakuvat dronella kaupan päälle</li>
+          <li>Neuvon etukäteen, miten koti laitetaan kuvauskuntoon</li>
+          <li>Kuvat valmiina seuraavana päivänä</li>
+          <li>Ei matkakuluja Etelä-Suomessa</li>
+        </ul>
       </div>
-    </div>
-    <div class="hero-img">
-      <img src="images/hero.jpg" alt="Valoisa olohuone korkealla katolla ja suurilla ikkunoilla" fetchpriority="high">
-    </div>
-  </section>
 
-  <section class="wrap gallery-sec" id="galleria">
-    <div class="sec-head">
-      <h2>Viimeisimpiä kuvauksia</h2>
-    </div>
-    <div id="grid">
-      <figure class="feature"><img loading="lazy" src="images/exterior.jpg" alt="Valkoinen omakotitalo ja terassi kesällä"></figure>
-      <div class="gallery">
-        <figure class="tall"><img loading="lazy" src="images/dining-brick.jpg" alt="Ruokailutila ja olohuone tiiliseinällä ja kaari-ikkunalla"></figure>
-        <figure class="wide"><img loading="lazy" src="images/kitchen-white.jpg" alt="Valkoinen saarekekeittiö ja erkkeri-ikkunat"></figure>
-        <figure><img loading="lazy" src="images/dining-marble.jpg" alt="Ruokailutila marmoripöydällä"></figure>
-        <figure><img loading="lazy" src="images/living-attic.jpg" alt="Vaalea olohuone vinokaton alla"></figure>
-        <figure><img loading="lazy" src="images/sauna.jpg" alt="Suomalainen puusauna"></figure>
-        <figure><img loading="lazy" src="images/living-seaview.jpg" alt="Vaalea olohuone kerrostalossa"></figure>
-        <figure class="tall"><img loading="lazy" src="images/balcony.jpg" alt="Lasitettu parveke puukatolla ja näköalalla"></figure>
-        <figure class="wide low"><img loading="lazy" src="images/bedroom-attic.jpg" alt="Makuuhuone vinokaton alla"></figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap steps-sec">
-    <div class="sec-head"><h2>Näin se toimii</h2></div>
-    <ol class="steps">
-      <li><span class="num">01</span><h3>Tilaa</h3><p>Täytä lomake tai soita, niin sovitaan kuvausaika. Yleensä pääsen paikalle kolmen päivän sisällä.</p></li>
-      <li><span class="num">02</span><h3>Kuvaan</h3><p>Kuvaan sisätilat ja pihan. Ilmakuvat otan dronella.</p></li>
-      <li><span class="num">03</span><h3>Saat kuvat</h3><p>Saat 20 valmiiksi käsiteltyä kuvaa seuraavana päivänä. Ne voi ladata suoraan myynti-ilmoitukseen.</p></li>
-    </ol>
-  </section>
-
-  <section class="wrap about">
-    <img loading="lazy" src="images/profile.jpg" alt="Henrik Janér">
-    <div>
-      <blockquote>Käytän luonnollista valoa, pidän linjat suorina ja käsittelen jokaisen kuvan huolella, jotta asuntosi näyttää kuvissa yhtä hyvältä kuin paikan päällä.</blockquote>
-      <p class="who">Henrik Janér, asuntokuvaaja, Etelä-Suomi</p>
-      <a class="link" href="https://g.page/r/CXJGT49FrG5vEBM" target="_blank" rel="noopener">Lue asiakkaiden arvostelut Googlessa</a>
-    </div>
-  </section>
-
-  <section class="order" id="tilaa">
-    <div class="order-in">
-      <div class="side">
+      <div class="card" id="tilaa">
         <h2>Tilaa kuvaus</h2>
-        <p>Jätä yhteystietosi, niin soitan ja sovitaan kuvausaika.</p>
-        <div class="price">149 €<small>sis. alv 25,5 %</small></div>
-        <div class="alt">
-          <a href="tel:+358405326009" class="link" data-track="puhelu">Soita 040 532 6009</a>
-          <a href="https://wa.me/358405326009?text=Hei%2C%20haluaisin%20tilata%20asuntokuvauksen.%20Osoite%3A%20%20m%C2%B2%3A%20%20Toivottu%20aika%3A%20" class="link" data-track="whatsapp" target="_blank" rel="noopener">Lähetä viesti WhatsAppissa</a>
-        </div>
-      </div>
-
-      <form id="orderForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="718d51e1-0b7c-4adf-bf37-ca917a3c2a3a">
-        <input type="hidden" name="subject" value="Uusi kuvaustilaus · henrikjaner.com">
-        <input type="hidden" name="from_name" value="henrikjaner.com">
-        <input type="hidden" name="redirect" value="https://henrikjaner.com/kiitos.html">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-
-        <div class="field"><label for="f-name">Nimi</label><input id="f-name" name="Nimi" required autocomplete="name"></div>
-        <div class="field"><label for="f-phone">Puhelin</label><input id="f-phone" name="Puhelin" type="tel" required autocomplete="tel"></div>
-        <div class="field full"><label for="f-addr">Osoite tai paikkakunta</label><input id="f-addr" name="Osoite" required autocomplete="street-address"></div>
-        <div class="field"><label for="f-size">Asunnon koko, m² <span class="opt">(vapaaehtoinen)</span></label><input id="f-size" name="Koko (m²)" inputmode="numeric"></div>
-        <div class="field"><label for="f-date">Toivottu kuvausaika <span class="opt">(vapaaehtoinen)</span></label><input id="f-date" name="Toivottu kuvausaika"></div>
-        <div class="field full"><label for="f-msg">Lisätietoja <span class="opt">(vapaaehtoinen)</span></label><textarea id="f-msg" name="Lisätietoja"></textarea></div>
-
-        <div class="form-foot">
-          <button type="submit" class="btn">Lähetä tilaus</button>
+        <p class="sub">Soitan sinulle, ja sovitaan kuvausaika.</p>
+        <div class="price"><strong>149 €</strong><small>sis. alv 25,5 %</small></div>
+        <form id="orderForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="718d51e1-0b7c-4adf-bf37-ca917a3c2a3a">
+          <input type="hidden" name="subject" value="Uusi kuvaustilaus · henrikjaner.com">
+          <input type="hidden" name="from_name" value="henrikjaner.com">
+          <input type="hidden" name="redirect" value="https://henrikjaner.com/kiitos.html">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+          <label class="sr" for="f-name">Nimi</label>
+          <input id="f-name" name="Nimi" placeholder="Nimi" required autocomplete="name">
+          <label class="sr" for="f-phone">Puhelin</label>
+          <input id="f-phone" name="Puhelin" type="tel" placeholder="Puhelin" required autocomplete="tel">
+          <label class="sr" for="f-addr">Osoite tai paikkakunta</label>
+          <input id="f-addr" name="Osoite" placeholder="Osoite tai paikkakunta" required autocomplete="street-address">
+          <button type="submit" class="btn">Tilaa kuvaus</button>
           <p class="form-msg" id="formMsg" role="status" hidden></p>
-          <p class="fine">Tiedot käsitellään <a href="tietosuoja.html">tietosuojaselosteen</a> mukaisesti.</p>
-        </div>
-      </form>
+          <p class="fine">Tai soita <a href="tel:+358405326009" data-track="puhelu">040 532 6009</a> · <a href="tietosuoja.html">Tietosuoja</a></p>
+        </form>
+      </div>
+    </section>
+
+    <div id="grid">
+      <figure class="feature"><img src="images/hero.jpg" alt="Valoisa olohuone korkealla katolla ja suurilla ikkunoilla" fetchpriority="high"></figure>
+      <div class="gal">
+        <img loading="lazy" src="images/dining-brick.jpg" alt="Ruokailutila ja olohuone tiiliseinällä ja kaari-ikkunalla">
+        <img loading="lazy" src="images/bedroom-green.jpg" alt="Makuuhuone vihrein vuodevaattein">
+        <img loading="lazy" src="images/kitchen-white.jpg" alt="Valkoinen saarekekeittiö ja erkkeri-ikkunat">
+        <img loading="lazy" src="images/exterior.jpg" alt="Valkoinen omakotitalo ja terassi kesällä">
+        <img loading="lazy" src="images/balcony.jpg" alt="Lasitettu parveke puukatolla ja näköalalla">
+        <img loading="lazy" src="images/dining-marble.jpg" alt="Ruokailutila marmoripöydällä">
+        <img loading="lazy" src="images/living-attic.jpg" alt="Vaalea olohuone vinokaton alla">
+        <img loading="lazy" src="images/sauna.jpg" alt="Suomalainen puusauna">
+        <img loading="lazy" src="images/living-seaview.jpg" alt="Vaalea olohuone kerrostalossa">
+      </div>
     </div>
-  </section>
 
-</main>
+    <section class="prep">
+      <div class="prep-head">
+        <h2>Ennen kuvausta</h2>
+        <p>Pieni valmistelu näkyy kuvissa. Käydään lista yhdessä läpi puhelimessa, kun sovitaan kuvausaika.</p>
+      </div>
+      <ul class="boxes">
+        <li>Tyhjennä keittiön tasot, pöydät ja ikkunalaudat</li>
+        <li>Laita henkilökohtaiset tavarat piiloon: valokuvat, lääkkeet, jääkaapin magneetit</li>
+        <li>Avaa verhot ja sälekaihtimet</li>
+        <li>Vaihda palaneet lamput</li>
+        <li>Petaa sängyt ja oikaise tyynyt</li>
+        <li>Kylpyhuoneessa: pesuaineet ja pullot pois näkyvistä, puhtaat pyyhkeet esiin, WC:n kansi alas</li>
+        <li>Vie kengät, takit, lelut ja roska-astiat pois näkyvistä</li>
+        <li>Siisti piha tai parveke ja siirrä autot pois talon edestä</li>
+      </ul>
+    </section>
 
-<footer>
-  <div class="wrap">
+    <section class="bio">
+      <img loading="lazy" src="images/profile.jpg" alt="Henrik Janér">
+      <div>
+        <h2>Henrik Janér</h2>
+        <p class="role">Asuntokuvaaja, Etelä-Suomi</p>
+        <p>Kuvaan koteja, jotka ovat menossa myyntiin. Kun sovitaan kuvausaika, käydään puhelimessa läpi, miten koti kannattaa valmistella. Kuvauspäivänä hoidan valon, sommittelun ja jälkikäsittelyn.</p>
+        <a class="link" href="https://g.page/r/CXJGT49FrG5vEBM" target="_blank" rel="noopener">Arvostelut Googlessa</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div>Henrik Janér · Asuntokuvaus · Etelä-Suomi</div>
     <nav>
       <a href="tel:+358405326009" data-track="puhelu">040 532 6009</a>
       <a href="mailto:tilaus@henrikjaner.com" data-track="sahkoposti">tilaus@henrikjaner.com</a>
-      <a href="https://g.page/r/CXJGT49FrG5vEBM" target="_blank" rel="noopener">Arvostelut Googlessa</a>
+      <a href="https://wa.me/358405326009" data-track="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
       <a href="https://g.page/r/CXJGT49FrG5vEBM/review" target="_blank" rel="noopener">Jätä arvostelu</a>
       <a href="tietosuoja.html">Tietosuojaseloste</a>
       <a href="#" data-consent-open>Evästeasetukset</a>
     </nav>
-  </div>
-</footer>
+  </footer>
+</div>
 
 <div class="lb" id="lb">
   <span class="lb-close" id="lbClose">&times;</span>
@@ -301,8 +234,8 @@
           location.href='kiitos.html';
         })
         .catch(function(){
-          btn.disabled=false;btn.textContent='Lähetä tilaus';
-          msg.textContent='Lähetys ei onnistunut. Soita 040 532 6009 tai lähetä viesti WhatsAppissa.';msg.hidden=false;
+          btn.disabled=false;btn.textContent='Tilaa kuvaus';
+          msg.textContent='Lähetys ei onnistunut. Soita 040 532 6009.';msg.hidden=false;
         });
     });
   })();

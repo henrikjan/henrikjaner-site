@@ -78,14 +78,14 @@
 
   var css =
     '.cb{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;max-width:560px;margin:0 auto;' +
-    'background:#f6f2ea;color:#1f211d;border:1px solid #1f211d;padding:20px 22px;' +
+    'background:#fff;color:#241f22;border-radius:14px;padding:20px 22px;' +
     'box-shadow:0 12px 40px rgba(0,0,0,.12);font-size:.9rem;line-height:1.5;display:none}' +
     '.cb.open{display:block}' +
-    '.cb p{margin:0 0 14px;color:#4d4b44}' +
+    '.cb p{margin:0 0 14px;color:#665d62}' +
     '.cb a{text-decoration:underline}' +
     '.cb-row{display:flex;gap:10px;flex-wrap:wrap}' +
-    '.cb button{flex:1 1 140px;font:inherit;font-weight:600;border-radius:0;padding:11px 18px;' +
-    'cursor:pointer;background:#2e4a3d;color:#f6f2ea;border:1px solid #2e4a3d}' +
+    '.cb button{flex:1 1 140px;font:inherit;font-weight:700;border-radius:8px;padding:12px 18px;' +
+    'cursor:pointer;background:#7c2336;color:#fff;border:0;box-shadow:0 3px 0 #561522}' +
     '.cb button:hover{opacity:.9}';
 
   var banner;
@@ -98,7 +98,7 @@
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-label', 'Evästeasetukset');
     banner.innerHTML =
-      '<p>Käytämme Google Ads -evästeitä mainonnan mittaamiseen ja kohdentamiseen vain, jos hyväksyt ne. ' +
+      '<p>Sivusto käyttää Google Ads -evästeitä mainonnan mittaamiseen ja kohdentamiseen vain, jos hyväksyt ne. ' +
       'Sivusto toimii ilman niitä. Lisätietoja <a href="tietosuoja.html">tietosuojaselosteessa</a>.</p>' +
       '<div class="cb-row"><button type="button" data-c="deny">Hylkää</button>' +
       '<button type="button" data-c="ok">Hyväksy</button></div>';
