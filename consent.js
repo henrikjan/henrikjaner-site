@@ -123,4 +123,25 @@
   else init();
 
   window.hjConsent = { open: show };
+
+  /* Konversiot. Lomakkeen konversio mitataan Google Adsissa kiitos.html-sivun URL:sta.
+     Puhelu-, WhatsApp- ja sähköpostiklikkauksille lisää Google Adsin konversiotunniste
+     (send_to-arvon kauttaviivan jälkeinen osa) alle. Tyhjä tunniste = vain tapahtuma.
+     Mitään ei lähetetä ennen suostumusta, koska tagi ladataan vasta hyväksynnän jälkeen. */
+  var LABELS = {
+    puhelu: '',
+    whatsapp: '',
+    sahkoposti: '',
+    lomake: ''
+  };
+  function track(name) {
+    if (!loaded) return;
+    gtag('event', 'hj_' + name);
+    if (LABELS[name]) gtag('event', 'conversion', { send_to: TAG + '/' + LABELS[name] });
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest && e.target.closest('[data-track]');
+    if (el) track(el.getAttribute('data-track'));
+  });
+  window.hjTrack = track;
 })();
