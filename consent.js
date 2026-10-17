@@ -86,7 +86,9 @@
     '.cb-row{display:flex;gap:10px;flex-wrap:wrap}' +
     '.cb button{flex:1 1 140px;font:inherit;font-weight:700;border-radius:8px;padding:12px 18px;' +
     'cursor:pointer;background:#7c2336;color:#fff;border:0;box-shadow:0 3px 0 #561522}' +
-    '.cb button:hover{opacity:.9}';
+    '.cb button:hover{opacity:.9}' +
+    '@media(max-width:560px){.cb{left:8px;right:8px;top:8px;bottom:auto;padding:12px 14px;font-size:.8rem}' +
+    '.cb p{margin-bottom:10px}.cb button{flex-basis:100px;padding:9px 12px}}';
 
   var banner;
   function build() {
