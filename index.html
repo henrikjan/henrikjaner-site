@@ -252,6 +252,13 @@
         });
     });
   })();
+
+  // Google Ads -konversio sähköposti-, puhelin- ja WhatsApp-linkin klikkauksesta.
+  // gtag ladataan vasta suostumuksen jälkeen (consent.js).
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('a[href^="mailto:"], a[href^="tel:"], a[href*="wa.me"]'))return;
+    if (window.gtag) gtag('event', 'conversion', {'send_to': 'AW-18506323049/dl9gCMeu2aAdEOmowPhE'});
+  });
 </script>
 </body>
 </html>
