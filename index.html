@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asuntokuvaus itse myyvälle · Henrik Janér</title>
-<meta name="description" content="Myytkö asuntoa itse? 20 valmiiksi käsiteltyä kuvaa ja ilmakuvat dronella, kuvat valmiina seuraavana päivänä. 149 € Etelä-Suomessa ilman matkakuluja.">
+<meta name="description" content="Asuntokuvaus itse myyvälle Etelä-Suomessa: 149 € sis. alv. 20 valmiiksi käsiteltyä kuvaa, ilmakuvat dronella ja kuvat valmiina seuraavana päivänä.">
 <!-- Google tag (gtag.js), ladataan vasta suostumuksen jälkeen: ks. consent.js -->
 <script src="consent.js"></script>
 <link rel="preload" href="fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -68,6 +68,13 @@
   .boxes li{break-inside:avoid;position:relative;padding:12px 0 12px 34px;border-bottom:1px solid var(--line)}
   .boxes li::before{content:"";position:absolute;left:0;top:14px;width:18px;height:18px;border:2px solid var(--ac);border-radius:4px}
 
+  /* Usein kysyttyä */
+  .faq{padding-top:96px;display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:start}
+  .faq-list{border-top:1px solid var(--line)}
+  .faq-list div{padding:16px 0;border-bottom:1px solid var(--line)}
+  .faq-list h3{font-size:1.08rem;margin-bottom:4px}
+  .faq-list p{color:var(--soft);max-width:60ch}
+
   /* Esittely */
   .bio{padding-top:96px;display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:center}
   .bio img{border-radius:12px}
@@ -91,7 +98,7 @@
     .hero-text{display:contents}
     .area{order:1}.hero h1{order:2}.card{order:3;margin-top:20px}.lead{order:4;margin:28px 0 18px}.offer{order:5}
     .gal{columns:2}
-    .prep{grid-template-columns:1fr;gap:20px}
+    .prep,.faq{grid-template-columns:1fr;gap:20px}
     .bio{grid-template-columns:160px 1fr;gap:28px}
   }
   @media(max-width:560px){
@@ -125,7 +132,7 @@
       <div class="hero-text">
         <p class="area">Asuntokuvaus itse myyvälle · Etelä-Suomi</p>
         <h1>Myytkö asuntoa itse? Hyvät kuvat tuovat ostajat näyttöön.</h1>
-        <p class="lead">Ostajat valitsevat näytöt kuvien perusteella. Kuvaan kotisi niin, että se erottuu edukseen.</p>
+        <p class="lead">Ostajat valitsevat näytöt kuvien perusteella. Teen asunnon kuvauksen myyntiä varten niin, että kotisi erottuu edukseen.</p>
         <ul class="offer">
           <li>20 valmiiksi käsiteltyä kuvaa</li>
           <li id="drone">Ilmakuvat dronella kaupan päälle</li>
@@ -192,6 +199,24 @@
         <li>Vie kengät, takit, lelut ja roska-astiat pois näkyvistä</li>
         <li>Siisti piha tai parveke ja siirrä autot pois talon edestä</li>
       </ul>
+    </section>
+
+    <section class="faq">
+      <h2>Usein kysyttyä</h2>
+      <div class="faq-list">
+        <div>
+          <h3>Paljonko asuntokuvaus maksaa?</h3>
+          <p>149 € sis. alv 25,5 %. Hintaan kuuluvat 20 valmiiksi käsiteltyä kuvaa, ilmakuvat dronella ja neuvot kodin valmisteluun. Etelä-Suomessa ei ole matkakuluja.</p>
+        </div>
+        <div>
+          <h3>Mitä asunnon valokuvaus sisältää?</h3>
+          <p>Saat 20 valmiiksi käsiteltyä kuvaa ja ilmakuvat dronella. Ennen kuvausta käydään puhelimessa läpi, miten koti laitetaan kuvauskuntoon.</p>
+        </div>
+        <div>
+          <h3>Milloin kuvat ovat valmiit?</h3>
+          <p>Kuvat ovat valmiit kuvausta seuraavana päivänä.</p>
+        </div>
+      </div>
     </section>
 
     <section class="bio">
